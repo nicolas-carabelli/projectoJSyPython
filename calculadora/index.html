@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Ingresos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Ingresos</h2>
+        <div>
+            <label>Salario Base:</label>
+            <input type="number" id="salarioBase" />
+        </div>
+        <div>
+            <label>Comisiones:</label>
+            <input type="number" id="comisiones" />
+        </div>
+        <div>
+            <button onclick="calcularIngresos()">Calcular Ingresos Totales</button>
+        </div>
+        <div>
+            <label>Ingresos Totales:</label>
+            <input type="text" id="ingresosTotales" readonly />
+        </div>
+    </div>
+    <script src="calculador.js"></script>
+</body>
+</html>
+
