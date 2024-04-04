@@ -1,0 +1,24 @@
+body {
+    background-image: url('TTPD.jpg'); /* Cambia esto por la ruta real de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Texto en blanco */
+    font-family: 'Playfair Display', serif; /* Fuente elegante similar a la de la imagen */
+}
+
+h1 {
+    font-size: 3em; /* Tamaño de fuente más grande para el título */
+    margin-bottom: 50px; /* Espacio debajo del título */
+    text-shadow: 2px 2px 4px #000; /* Sombra de texto para mejorar la legibilidad */
+}
+
+#countdown {
+    font-size: 2em; /* Tamaño de fuente para la cuenta regresiva */
+    text-shadow: 2px 2px 4px #000; /* Sombra de texto para mejorar la legibilidad */
+}
+
+span {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para los números */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
