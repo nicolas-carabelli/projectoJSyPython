@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <style>
+        body {
+            background-color: #F5E1E1;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #1A1A1A;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #C8102E;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 2px solid #C8102E;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #C8102E;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8B0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+    <p>Intenta adivinar la palabra:</p>
+    <p style="font-size: 28px; color: #C8102E;">{{ mostrar_letras(palabra, letras_adivinadas) }}</p>
+    <p>Intentos restantes: <span style="font-weight: bold; color: #C8102E;">{{ intentos_restantes }}</span></p>
+    <form action="/jugar" method="POST">
+        <input type="hidden" name="palabra" value="{{ palabra }}">
+        <input type="hidden" name="intentos_restantes" value="{{ intentos_restantes }}">
+        {% for letra_adivinada in letras_adivinadas %}
+            <input type="hidden" name="letras_adivinadas[]" value="{{ letra_adivinada }}">
+        {% endfor %}
+        <input type="text" name="letra" maxlength="1" size="1">
+        <input type="submit" value="Adivinar">
+    </form>
+</body>
+</html>
+
